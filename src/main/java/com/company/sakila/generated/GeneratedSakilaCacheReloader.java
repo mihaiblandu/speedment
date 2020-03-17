@@ -48,6 +48,7 @@ public abstract class GeneratedSakilaCacheReloader implements DataStoreReloader 
     
     @Override
     public DataStoreHolder reload(StreamSupplierComponent streamSupplier, ExecutorService executor) {
+        final CompletableFuture<GeneratedUserCacheHolder> userHolder                                      = GeneratedUserCacheHolder.reload(streamSupplier, executor);
         final CompletableFuture<GeneratedActorCacheHolder> actorHolder                                    = GeneratedActorCacheHolder.reload(streamSupplier, executor);
         final CompletableFuture<GeneratedAddressCacheHolder> addressHolder                                = GeneratedAddressCacheHolder.reload(streamSupplier, executor);
         final CompletableFuture<GeneratedCategoryCacheHolder> categoryHolder                              = GeneratedCategoryCacheHolder.reload(streamSupplier, executor);
@@ -64,7 +65,6 @@ public abstract class GeneratedSakilaCacheReloader implements DataStoreReloader 
         final CompletableFuture<GeneratedRentalCacheHolder> rentalHolder                                  = GeneratedRentalCacheHolder.reload(streamSupplier, executor);
         final CompletableFuture<GeneratedStaffCacheHolder> staffHolder                                    = GeneratedStaffCacheHolder.reload(streamSupplier, executor);
         final CompletableFuture<GeneratedStoreCacheHolder> storeHolder                                    = GeneratedStoreCacheHolder.reload(streamSupplier, executor);
-        final CompletableFuture<GeneratedUserCacheHolder> userHolder                                      = GeneratedUserCacheHolder.reload(streamSupplier, executor);
         final CompletableFuture<GeneratedActorInfoCacheHolder> actorInfoHolder                            = GeneratedActorInfoCacheHolder.reload(streamSupplier, executor);
         final CompletableFuture<GeneratedCustomerListCacheHolder> customerListHolder                      = GeneratedCustomerListCacheHolder.reload(streamSupplier, executor);
         final CompletableFuture<GeneratedFilmListCacheHolder> filmListHolder                              = GeneratedFilmListCacheHolder.reload(streamSupplier, executor);
@@ -76,6 +76,7 @@ public abstract class GeneratedSakilaCacheReloader implements DataStoreReloader 
         final DataStoreHolder holder;
         try {
             holder = new GeneratedSakilaDataStoreHolder(
+                userHolder.get(),
                 actorHolder.get(),
                 addressHolder.get(),
                 categoryHolder.get(),
@@ -92,7 +93,6 @@ public abstract class GeneratedSakilaCacheReloader implements DataStoreReloader 
                 rentalHolder.get(),
                 staffHolder.get(),
                 storeHolder.get(),
-                userHolder.get(),
                 actorInfoHolder.get(),
                 customerListHolder.get(),
                 filmListHolder.get(),

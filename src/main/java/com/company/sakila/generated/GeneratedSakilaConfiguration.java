@@ -123,6 +123,11 @@ public class GeneratedSakilaConfiguration {
     }
     
     @Bean
+    public UserManager getUserManager(SakilaApplication app) {
+        return app.getOrThrow(UserManager.class);
+    }
+    
+    @Bean
     public ActorManager getActorManager(SakilaApplication app) {
         return app.getOrThrow(ActorManager.class);
     }
@@ -200,11 +205,6 @@ public class GeneratedSakilaConfiguration {
     @Bean
     public StoreManager getStoreManager(SakilaApplication app) {
         return app.getOrThrow(StoreManager.class);
-    }
-    
-    @Bean
-    public UserManager getUserManager(SakilaApplication app) {
-        return app.getOrThrow(UserManager.class);
     }
     
     @Bean

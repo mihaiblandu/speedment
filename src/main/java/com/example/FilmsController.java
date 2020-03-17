@@ -13,10 +13,7 @@ import com.speedment.runtime.connector.mysql.MySqlBundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
@@ -25,7 +22,7 @@ import java.util.Set;
 
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.*;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/film")
 public class FilmsController {

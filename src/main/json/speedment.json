@@ -8,11 +8,78 @@
     "packageLocation" : "src/main/java/",
     "dbmses" : [
       {
+        "nameProtected" : true,
         "expanded" : true,
         "port" : 3306,
         "schemas" : [
           {
+            "expanded" : true,
             "tables" : [
+              {
+                "expanded" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Long",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "name",
+                    "id" : "name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "sur_name",
+                    "id" : "sur_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "user",
+                "id" : "user",
+                "enabled" : true
+              },
               {
                 "expanded" : true,
                 "primaryKeyColumns" : [
@@ -62,8 +129,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "actor_id",
@@ -104,6 +171,7 @@
                 "enabled" : true
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -124,7 +192,6 @@
                     "enabled" : true
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -187,8 +254,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "address_id",
@@ -225,8 +292,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "city_id",
                     "id" : "city_id",
@@ -305,8 +372,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "category_id",
@@ -334,6 +401,7 @@
                 "id" : "category"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -353,7 +421,6 @@
                     "id" : "fk_city_country"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -398,8 +465,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "city_id",
@@ -416,8 +483,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "country_id",
                     "id" : "country_id",
@@ -466,8 +533,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "country_id",
@@ -495,6 +562,7 @@
                 "id" : "country"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -531,7 +599,6 @@
                     "id" : "fk_customer_store"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -606,8 +673,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "customer_id",
@@ -616,8 +683,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "store_id",
                     "id" : "store_id",
@@ -649,8 +716,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "address_id",
                     "id" : "address_id",
@@ -658,8 +725,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Boolean",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "active",
                     "id" : "active",
@@ -686,6 +753,7 @@
                 "id" : "customer"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -722,7 +790,6 @@
                     "id" : "fk_film_language_original"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -797,8 +864,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "film_id",
@@ -831,8 +898,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "language_id",
                     "id" : "language_id",
@@ -848,8 +915,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "rental_duration",
                     "id" : "rental_duration",
@@ -909,6 +976,7 @@
                 "id" : "film"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -945,7 +1013,6 @@
                     "id" : "fk_film_actor_film"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -1003,8 +1070,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "actor_id",
                     "id" : "actor_id",
@@ -1012,8 +1079,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "film_id",
                     "id" : "film_id",
@@ -1032,6 +1099,7 @@
                 "id" : "film_actor"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -1068,7 +1136,6 @@
                     "id" : "fk_film_category_film"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -1126,8 +1193,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "film_id",
                     "id" : "film_id",
@@ -1135,8 +1202,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "category_id",
                     "id" : "category_id",
@@ -1207,8 +1274,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "film_id",
                     "id" : "film_id",
@@ -1235,6 +1302,7 @@
                 "id" : "film_text"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -1271,7 +1339,6 @@
                     "id" : "fk_inventory_store"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -1338,8 +1405,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "inventory_id",
@@ -1348,8 +1415,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "film_id",
                     "id" : "film_id",
@@ -1357,8 +1424,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "store_id",
                     "id" : "store_id",
@@ -1407,8 +1474,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "language_id",
@@ -1436,6 +1503,7 @@
                 "id" : "language"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -1489,7 +1557,6 @@
                     "id" : "fk_payment_staff"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -1564,8 +1631,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "payment_id",
@@ -1574,8 +1641,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "customer_id",
                     "id" : "customer_id",
@@ -1583,8 +1650,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "staff_id",
                     "id" : "staff_id",
@@ -1627,6 +1694,7 @@
                 "id" : "payment"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -1680,7 +1748,6 @@
                     "id" : "fk_rental_staff"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -1784,8 +1851,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "rental_id",
@@ -1802,8 +1869,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "inventory_id",
                     "id" : "inventory_id",
@@ -1811,8 +1878,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "customer_id",
                     "id" : "customer_id",
@@ -1828,8 +1895,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "staff_id",
                     "id" : "staff_id",
@@ -1848,6 +1915,7 @@
                 "id" : "rental"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -1884,7 +1952,6 @@
                     "id" : "fk_staff_store"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -1944,8 +2011,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "staff_id",
@@ -1970,8 +2037,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "address_id",
                     "id" : "address_id",
@@ -1995,8 +2062,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "store_id",
                     "id" : "store_id",
@@ -2004,8 +2071,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Boolean",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "active",
                     "id" : "active",
@@ -2040,6 +2107,7 @@
                 "id" : "staff"
               },
               {
+                "expanded" : true,
                 "foreignKeys" : [
                   {
                     "expanded" : false,
@@ -2076,7 +2144,6 @@
                     "id" : "fk_store_staff"
                   }
                 ],
-                "expanded" : true,
                 "primaryKeyColumns" : [
                   {
                     "expanded" : true,
@@ -2136,8 +2203,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "autoIncrement" : true,
                     "name" : "store_id",
@@ -2146,8 +2213,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "manager_staff_id",
                     "id" : "manager_staff_id",
@@ -2155,8 +2222,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "address_id",
                     "id" : "address_id",
@@ -2176,71 +2243,12 @@
               },
               {
                 "expanded" : true,
-                "primaryKeyColumns" : [
-                  {
-                    "expanded" : true,
-                    "name" : "id",
-                    "id" : "id",
-                    "ordinalPosition" : 1
-                  }
-                ],
-                "indexes" : [
-                  {
-                    "expanded" : false,
-                    "unique" : true,
-                    "name" : "PRIMARY",
-                    "indexColumns" : [
-                      {
-                        "orderType" : "ASC",
-                        "expanded" : true,
-                        "name" : "id",
-                        "id" : "id",
-                        "ordinalPosition" : 1
-                      }
-                    ],
-                    "id" : "PRIMARY"
-                  }
-                ],
-                "isView" : false,
-                "columns" : [
-                  {
-                    "databaseType" : "java.lang.Long",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
-                    "expanded" : true,
-                    "nullable" : false,
-                    "autoIncrement" : true,
-                    "name" : "id",
-                    "id" : "id",
-                    "ordinalPosition" : 1
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "name",
-                    "id" : "name",
-                    "ordinalPosition" : 2
-                  },
-                  {
-                    "databaseType" : "java.lang.String",
-                    "expanded" : true,
-                    "nullable" : true,
-                    "name" : "sur_name",
-                    "id" : "sur_name",
-                    "ordinalPosition" : 3
-                  }
-                ],
-                "name" : "user",
-                "id" : "user"
-              },
-              {
-                "expanded" : true,
                 "isView" : true,
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "actor_id",
                     "id" : "actor_id",
@@ -2280,8 +2288,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Integer",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "ID",
                     "id" : "ID",
@@ -2345,8 +2353,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "SID",
                     "id" : "SID",
@@ -2564,8 +2572,8 @@
                 "columns" : [
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "ID",
                     "id" : "ID",
@@ -2621,8 +2629,8 @@
                   },
                   {
                     "databaseType" : "java.lang.Short",
-                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
                     "nullable" : false,
                     "name" : "SID",
                     "id" : "SID",
@@ -2633,7 +2641,6 @@
                 "id" : "staff_list"
               }
             ],
-            "expanded" : true,
             "name" : "sakila",
             "id" : "sakila",
             "enabled" : true

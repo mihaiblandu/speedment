@@ -73,6 +73,7 @@ public abstract class GeneratedSakilaApplicationBuilder extends AbstractApplicat
     
     protected GeneratedSakilaApplicationBuilder() {
         super(SakilaApplicationImpl.class, GeneratedSakilaMetadata.class);
+        withManager(UserManagerImpl.class);
         withManager(ActorManagerImpl.class);
         withManager(AddressManagerImpl.class);
         withManager(CategoryManagerImpl.class);
@@ -89,7 +90,6 @@ public abstract class GeneratedSakilaApplicationBuilder extends AbstractApplicat
         withManager(RentalManagerImpl.class);
         withManager(StaffManagerImpl.class);
         withManager(StoreManagerImpl.class);
-        withManager(UserManagerImpl.class);
         withManager(ActorInfoManagerImpl.class);
         withManager(CustomerListManagerImpl.class);
         withManager(FilmListManagerImpl.class);
@@ -97,6 +97,7 @@ public abstract class GeneratedSakilaApplicationBuilder extends AbstractApplicat
         withManager(SalesByFilmCategoryManagerImpl.class);
         withManager(SalesByStoreManagerImpl.class);
         withManager(StaffListManagerImpl.class);
+        withComponent(UserSqlAdapter.class);
         withComponent(ActorSqlAdapter.class);
         withComponent(AddressSqlAdapter.class);
         withComponent(CategorySqlAdapter.class);
@@ -113,7 +114,6 @@ public abstract class GeneratedSakilaApplicationBuilder extends AbstractApplicat
         withComponent(RentalSqlAdapter.class);
         withComponent(StaffSqlAdapter.class);
         withComponent(StoreSqlAdapter.class);
-        withComponent(UserSqlAdapter.class);
         withComponent(ActorInfoSqlAdapter.class);
         withComponent(CustomerListSqlAdapter.class);
         withComponent(FilmListSqlAdapter.class);

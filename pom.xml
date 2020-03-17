@@ -81,6 +81,11 @@
             <version>${speedment.version}</version>
         
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+
     </dependencies>
     
     <build>
@@ -118,6 +123,7 @@
                 
                 <version>3.8.1</version>
             </plugin>
+
         </plugins>
     </build>
     

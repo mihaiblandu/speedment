@@ -74,6 +74,7 @@ import static java.util.Objects.requireNonNull;
 @GeneratedCode("Speedment")
 public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
     
+    private final GeneratedUserCacheHolder userHolder;
     private final GeneratedActorCacheHolder actorHolder;
     private final GeneratedAddressCacheHolder addressHolder;
     private final GeneratedCategoryCacheHolder categoryHolder;
@@ -90,7 +91,6 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
     private final GeneratedRentalCacheHolder rentalHolder;
     private final GeneratedStaffCacheHolder staffHolder;
     private final GeneratedStoreCacheHolder storeHolder;
-    private final GeneratedUserCacheHolder userHolder;
     private final GeneratedActorInfoCacheHolder actorInfoHolder;
     private final GeneratedCustomerListCacheHolder customerListHolder;
     private final GeneratedFilmListCacheHolder filmListHolder;
@@ -100,6 +100,7 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
     private final GeneratedStaffListCacheHolder staffListHolder;
     
     public GeneratedSakilaDataStoreHolder(
+            GeneratedUserCacheHolder userHolder,
             GeneratedActorCacheHolder actorHolder,
             GeneratedAddressCacheHolder addressHolder,
             GeneratedCategoryCacheHolder categoryHolder,
@@ -116,7 +117,6 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
             GeneratedRentalCacheHolder rentalHolder,
             GeneratedStaffCacheHolder staffHolder,
             GeneratedStoreCacheHolder storeHolder,
-            GeneratedUserCacheHolder userHolder,
             GeneratedActorInfoCacheHolder actorInfoHolder,
             GeneratedCustomerListCacheHolder customerListHolder,
             GeneratedFilmListCacheHolder filmListHolder,
@@ -124,6 +124,7 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
             GeneratedSalesByFilmCategoryCacheHolder salesByFilmCategoryHolder,
             GeneratedSalesByStoreCacheHolder salesByStoreHolder,
             GeneratedStaffListCacheHolder staffListHolder) {
+        this.userHolder                   = requireNonNull(userHolder);
         this.actorHolder                  = requireNonNull(actorHolder);
         this.addressHolder                = requireNonNull(addressHolder);
         this.categoryHolder               = requireNonNull(categoryHolder);
@@ -140,7 +141,6 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
         this.rentalHolder                 = requireNonNull(rentalHolder);
         this.staffHolder                  = requireNonNull(staffHolder);
         this.storeHolder                  = requireNonNull(storeHolder);
-        this.userHolder                   = requireNonNull(userHolder);
         this.actorInfoHolder              = requireNonNull(actorInfoHolder);
         this.customerListHolder           = requireNonNull(customerListHolder);
         this.filmListHolder               = requireNonNull(filmListHolder);
@@ -157,6 +157,7 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
             String schemaName,
             String tableName) {
         switch (tableName) {
+            case "user"                       : return (EntityStore<ENTITY>) userHolder.getEntityStore();
             case "actor"                      : return (EntityStore<ENTITY>) actorHolder.getEntityStore();
             case "address"                    : return (EntityStore<ENTITY>) addressHolder.getEntityStore();
             case "category"                   : return (EntityStore<ENTITY>) categoryHolder.getEntityStore();
@@ -173,7 +174,6 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
             case "rental"                     : return (EntityStore<ENTITY>) rentalHolder.getEntityStore();
             case "staff"                      : return (EntityStore<ENTITY>) staffHolder.getEntityStore();
             case "store"                      : return (EntityStore<ENTITY>) storeHolder.getEntityStore();
-            case "user"                       : return (EntityStore<ENTITY>) userHolder.getEntityStore();
             case "actor_info"                 : return (EntityStore<ENTITY>) actorInfoHolder.getEntityStore();
             case "customer_list"              : return (EntityStore<ENTITY>) customerListHolder.getEntityStore();
             case "film_list"                  : return (EntityStore<ENTITY>) filmListHolder.getEntityStore();
@@ -191,6 +191,7 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
     @SuppressWarnings("unchecked")
     public <ENTITY, CACHE extends FieldCache<CACHE>> CACHE getFieldCache(ColumnIdentifier<ENTITY> columnId) {
         switch (columnId.getTableId()) {
+            case "user"                       : return (CACHE) userHolder.getFieldCache((ColumnIdentifier<User>) columnId);
             case "actor"                      : return (CACHE) actorHolder.getFieldCache((ColumnIdentifier<Actor>) columnId);
             case "address"                    : return (CACHE) addressHolder.getFieldCache((ColumnIdentifier<Address>) columnId);
             case "category"                   : return (CACHE) categoryHolder.getFieldCache((ColumnIdentifier<Category>) columnId);
@@ -207,7 +208,6 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
             case "rental"                     : return (CACHE) rentalHolder.getFieldCache((ColumnIdentifier<Rental>) columnId);
             case "staff"                      : return (CACHE) staffHolder.getFieldCache((ColumnIdentifier<Staff>) columnId);
             case "store"                      : return (CACHE) storeHolder.getFieldCache((ColumnIdentifier<Store>) columnId);
-            case "user"                       : return (CACHE) userHolder.getFieldCache((ColumnIdentifier<User>) columnId);
             case "actor_info"                 : return (CACHE) actorInfoHolder.getFieldCache((ColumnIdentifier<ActorInfo>) columnId);
             case "customer_list"              : return (CACHE) customerListHolder.getFieldCache((ColumnIdentifier<CustomerList>) columnId);
             case "film_list"                  : return (CACHE) filmListHolder.getFieldCache((ColumnIdentifier<FilmList>) columnId);
@@ -249,6 +249,7 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
     @Override
     public Stream<EntityStoreHolder<?>> holders() {
         return Stream.of(
+            userHolder,
             actorHolder,
             addressHolder,
             categoryHolder,
@@ -265,7 +266,6 @@ public final class GeneratedSakilaDataStoreHolder implements DataStoreHolder {
             rentalHolder,
             staffHolder,
             storeHolder,
-            userHolder,
             actorInfoHolder,
             customerListHolder,
             filmListHolder,
