@@ -2651,7 +2651,7 @@
         "name" : "sakila",
         "id" : "sakila",
         "enabled" : true,
-        "username" : "root"
+        "username" : "user"
       }
     ],
     "enabled" : true,

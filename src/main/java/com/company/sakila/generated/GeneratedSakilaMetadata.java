@@ -2839,7 +2839,7 @@ public class GeneratedSakilaMetadata extends AbstractApplicationMetadata {
             "          }",
             "        ],",
             "        \"typeName\" : \"MySQL\",",
-            "        \"username\" : \"root\"",
+            "        \"username\" : \"user\"",
             "      }",
             "    ],",
             "    \"enabled\" : true,",

@@ -79,14 +79,11 @@
             <groupId>com.speedment.enterprise.plugins</groupId>
             <artifactId>spring-runtime</artifactId>
             <version>${speedment.version}</version>
-        
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
         </dependency>
-
-
     </dependencies>
     
     <build>
