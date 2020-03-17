@@ -21,6 +21,7 @@ pipeline {
           steps {
             sh 'ls -la'
             sh 'sh ./shell.sh'
+            sh 'sh ./remove.sh'
             sh 'ls -la'
           }
         }
