@@ -86,6 +86,7 @@
             <artifactId>spring-test</artifactId>
         </dependency>
 
+
     </dependencies>
     
     <build>
@@ -122,6 +123,15 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 
                 <version>3.8.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>io.takari.maven.plugins</groupId>
+                <artifactId>provisio-maven-plugin</artifactId>
+                <!--  careful - upgrade to 0.1.50 causes problem with extraction of tar.gz
+                instead of into .mvn/wrapper it looses the .mvn path and extracts to wrapper -->
+                <version>0.1.46</version>
+                <extensions>true</extensions>
             </plugin>
 
         </plugins>
