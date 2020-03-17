@@ -19,8 +19,8 @@ pipeline {
 
         stage('Docker') {
           steps {
-            sh '''docker-compose up -d
-'''
+            sh '''sh ./shell.sh'''
+            sh '''sh ./remove.sh'''
           }
         }
 
