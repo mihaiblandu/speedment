@@ -9,9 +9,21 @@ pipeline {
     }
 
     stage('Deploy') {
-      steps {
-        sh 'ls target/*.jar'
-        echo 'Deploying...'
+      parallel {
+        stage('Deploy') {
+          steps {
+            sh 'ls target/*.jar'
+            echo 'Deploying...'
+          }
+        }
+
+        stage('Docker') {
+          steps {
+            sh '''docker-compose up -d
+'''
+          }
+        }
+
       }
     }
 
