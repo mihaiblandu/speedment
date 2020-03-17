@@ -19,12 +19,18 @@ pipeline {
 
         stage('Docker') {
           steps {
-            sh '''ls -la'''
-            sh '''sh ./shell.sh'''
-            sh '''sh ./remove.sh'''
+            sh 'ls -la'
+            sh 'sh ./shell.sh'
+            sh 'sh ./remove.sh'
           }
         }
 
+      }
+    }
+
+    stage('Final stage') {
+      steps {
+        echo 'All tests are done.'
       }
     }
 
